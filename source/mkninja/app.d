@@ -31,15 +31,15 @@ void main(string[] args) {
 	if (basedir[$-1 .. $] != "/")
 		basedir ~= "/";
 	log = Log.MainLogger;
-	log.Info("MKNinja", "MKNinja Version %s.%s", VERSION_MAJOR, VERSION_MINOR);
+	log.Info("MKNinja Version %s.%s", VERSION_MAJOR, VERSION_MINOR);
 
 	try {
 		string data = loadFile(file);
-		log.Info("MKNinja", "Read '%s'.", file);
+		log.Info("Read '%s'.", file);
 		write(output, data);
-		log.Info("MKNinja", "Wrote '%s'.", output);
+		log.Info("Wrote '%s'.", output);
 	} catch (Exception e) {
-		log.Severe("MKNinja", e.msg);
+		log.Severe("%s", e.msg);
 	}
 }
 

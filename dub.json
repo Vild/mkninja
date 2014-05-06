@@ -3,7 +3,7 @@
 	"description": "A ninja build file generator",
 	"copyright": "Copyright © 2014, wildn00b",
 	"authors": ["wildn00b"],
-	"libs": ["ncurses"],
+	"libs": [],
 	"dependencies": {
 		"pegged": "~master"
 	}
