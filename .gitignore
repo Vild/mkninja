@@ -1,0 +1,7 @@
+.dub
+dub.userprefs
+/mkninja
+
+#windows
+*.exe
+*.dll

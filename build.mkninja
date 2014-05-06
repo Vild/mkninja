@@ -1,0 +1,13 @@
+cflags = -Wall -Werror -pedantic -g --std=c11 -DXINERAMA=1 -fshort-wchar
+lflags = -g -lm -lxcb -lxcb-xinerama -ljansson
+
+rule cc
+     command = gcc $cflags -c $in -o $out
+rule link
+     command = gcc $lflags $in -o $out
+
+
+@foreach("src", "*.c", "build obj/@file.o: cc @file")
+
+
+build a.out: link @foreach("src", "*.c", "obj/@file.o ", false)
